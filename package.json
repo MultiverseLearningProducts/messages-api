@@ -1,0 +1,23 @@
+{
+  "name": "messages-api",
+  "version": "1.0.0",
+  "description": "A simple messages API built with Express, Sequelize, and SQLite3.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "sequelize",
+    "sqlite3"
+  ],
+  "author": "Kieran Barker <kieran.barker@multiverse.io>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sequelize": "^6.25.6",
+    "sqlite3": "^5.1.2"
+  },
+  "private": true
+}
