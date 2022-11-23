@@ -2,18 +2,13 @@
 
 const http = require("http");
 const express = require("express");
+const { cors, auth } = require("./middleware");
 const { sequelize, Message, ValidationError } = require("./db");
 
 let app = express();
 
 app.set("json spaces", 2);
-
-app.use((_req, res, next) => {
-  res.set("Access-Control-Allow-Origin", "*");
-  next();
-});
-
-app.use(express.json());
+app.use(cors, auth, express.json());
 
 app.post("/messages", async (req, res, next) => {
   try {
